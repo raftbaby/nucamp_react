@@ -34,8 +34,8 @@ class Contact extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-
-    validate(firstName, lastName, phoneNum, email) {
+//REDUNDANT CODE
+    /*validate(firstName, lastName, phoneNum, email) {
 
         const errors = {
             firstName: '',
@@ -71,7 +71,7 @@ class Contact extends Component {
 
         return errors;
     }
-
+*/
     handleBlur = (field) => () => {
         this.setState({
             touched: {...this.state.touched, [field]: true}
@@ -96,7 +96,7 @@ class Contact extends Component {
     
     
     render(){
-        const errors = this.validate(this.state.firstName, this.state.lastName, this.state.phoneNum, this.state.email);    
+        //const errors = this.validate(this.state.firstName, this.state.lastName, this.state.phoneNum, this.state.email);    
         
         return (
             <div className="container">
