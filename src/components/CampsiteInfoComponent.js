@@ -9,9 +9,6 @@ const maxLength = len => val => !val || (val.length <= len);
 const minLength = len => val => val && (val.length >= len);
 
 
-//Thanks for the assist. I can proudly say I got most of those things adjusted before reading your comments
-//I had the 'author' Control.text box fixed, and had coded in the Text Area, and added the submit button with alerts, and console log.
-
 //Descriptive picture
     function RenderCampsite({campsite}) {
          return(
