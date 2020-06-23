@@ -1,5 +1,6 @@
 import React from 'react';
 
+//spinning load icon while waiting for server
 export const Loading = () => {
     return (
         <div className="col">

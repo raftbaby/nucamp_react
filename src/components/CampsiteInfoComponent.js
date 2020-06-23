@@ -138,7 +138,7 @@ function RenderComments({comments, postComment, campsiteId}) {
         handleSubmit(values) {
             this.toggleModal();
             this.props.postComment(this.props.campsiteId, values.rating, values.author, values.text);
-            }
+        }
             
 //turns Modal on/off
         toggleModal() {
@@ -147,25 +147,10 @@ function RenderComments({comments, postComment, campsiteId}) {
             });
         }
 
-//Error filter and description        REDUNDANT CODE
-      /*  validate(author) {
-            const errors = {
-                author: '',
-            };
-            if (this.state.touched.author) {
-                if (author.length < 2) {
-                    errors.author = 'Last name must be at least 2 characters.';
-                } else if (author.length > 15) {
-                    errors.author = 'Last name must be 15 or less characters.';
-                }
-            }
-            return errors;
-        }
-    */
+
         render() {
             //populates specific error
-            //const errors = this.validate(this.state.author);    
-            
+           
             return(
                 <React.Fragment>
                     {//Modal Button
@@ -213,8 +198,8 @@ function RenderComments({comments, postComment, campsiteId}) {
                             <div className ="form-group">
                                 {//Comment input
                                 }
-                                <Label htmlFor="comment">Comment</Label>
-                                <Control.textarea model=".comment" id="comment" name="comment" className="form-control"/>
+                                <Label htmlFor="text">Comment</Label>
+                                <Control.textarea model=".text" id="text" name="text" className="form-control"/>
                                 <br/>
                                 {//Submit Button
                                 }

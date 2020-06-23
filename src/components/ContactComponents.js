@@ -34,44 +34,7 @@ class Contact extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-//REDUNDANT CODE
-    /*validate(firstName, lastName, phoneNum, email) {
 
-        const errors = {
-            firstName: '',
-            lastName: '',
-            phoneNum: '',
-            email: ''
-        };
-
-        if (this.state.touched.firstName) {
-            if (firstName.length < 2) {
-                errors.firstName = 'First name must be at least 2 characters.';
-            } else if (firstName.length > 15) {
-                errors.firstName = 'First name must be 15 or less characters.';
-            }
-        }
-
-        if (this.state.touched.lastName) {
-            if (lastName.length < 2) {
-                errors.lastName = 'Last name must be at least 2 characters.';
-            } else if (lastName.length > 15) {
-                errors.lastName = 'Last name must be 15 or less characters.';
-            }
-        }
-
-        const reg = /^\d+$/;
-        if (this.state.touched.phoneNum && !reg.test(phoneNum)) {
-            errors.phoneNum = 'The phone number should contain only numbers.';
-        }
-
-        if (this.state.touched.email && !email.includes('@')) {
-            errors.email = 'Email should contain a @';
-        }
-
-        return errors;
-    }
-*/
     handleBlur = (field) => () => {
         this.setState({
             touched: {...this.state.touched, [field]: true}
@@ -89,9 +52,10 @@ class Contact extends Component {
     }
 
     handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
-        this.props.resetFeedbackForm();
+       /* console.log('Current State is: ' + JSON.stringify(values));
+        alert('Current State is: ' + JSON.stringify(values)); */
+        this.props.resetFeedbackForm(); //RESET FORM TO BLANK
+        this.props.postFeedback(values);
     }
     
     
